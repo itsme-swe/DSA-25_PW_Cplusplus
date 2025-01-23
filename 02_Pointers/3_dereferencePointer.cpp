@@ -13,5 +13,9 @@ int main()
 
   cout << *p << endl; // '*' dereference operator used to print the value stored at the address. 20
 
+  *p = 30; // Even we can update the value using pointers.
+
+  cout << x << endl;
+
   return 0;
 }
