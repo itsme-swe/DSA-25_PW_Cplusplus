@@ -10,11 +10,44 @@ Leetcode(238) : https://leetcode.com/problems/product-of-array-except-self/descr
  */
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
+vector<int> productExceptSelf(vector<int> &nums)
+{
+  int n = nums.size();
+  vector<int> ans(n, 1);
+
+  // prefix
+  for (int i = 1; i < n; i++)
+  {
+    ans[i] = ans[i - 1] * nums[i - 1];
+  }
+  // suffix
+  int suffix = 1;
+  for (int i = n - 2; i >= 0; i--)
+  {
+    suffix *= nums[i + 1];
+    ans[i] *= suffix;
+  }
+
+  return ans;
+}
+
 int main()
 {
+  vector<int> nums = {-1, 1, 0, -3, 3};
+
+  vector<int> ans = productExceptSelf(nums);
+
+  for (auto ele : ans)
+  {
+    cout << ele << " ";
+  }
+  cout << endl;
 
   return 0;
 }
+
+// op: 0 0 9 0 0
