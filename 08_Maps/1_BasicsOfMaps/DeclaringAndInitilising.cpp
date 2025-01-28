@@ -33,8 +33,8 @@ int main()
   mp.insert(p4);
   mp.insert(p5);
 
-  // 🔸 Method-1 to iterate over map
-  for (pair<int, string> p : mp)
+  // 🔸 Method-1 to iterate over map using for each loop
+  for (auto p : mp)
   {
     cout << p.first << " " << p.second << endl;
   }
