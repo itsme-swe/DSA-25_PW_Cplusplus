@@ -21,6 +21,7 @@ public:
 
 int main()
 {
+  Teacher t1("Shradha", "English", "English Core");
 
   return 0;
 }
