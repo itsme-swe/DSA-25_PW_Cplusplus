@@ -27,6 +27,13 @@ public:
     subject = s;
     dept = d;
   }
+
+  // 🔸 Creating member function
+  void getInfo()
+  {
+    cout << "Name: " << name << endl;
+    cout << "Dept: " << dept << endl;
+  }
 };
 
 int main()
@@ -34,8 +41,11 @@ int main()
   // 💥 Creating object and calling paramterized constructor
   Teacher t1("Sana", "CS", "Mechanical");
 
-  cout << t1.name << endl;
-  cout << t1.subject << endl;
-  
+  t1.getInfo(); // Calling member function
+  /*
+  Name: Sana
+  Dept: Mechanical
+  */
+
   return 0;
 }
