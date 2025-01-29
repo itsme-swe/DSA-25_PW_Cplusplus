@@ -17,7 +17,7 @@ bool isAnagram(string s, string t)
   // Counting frequencies of string s inside map m1
   for (int i = 0; i < n; i++)
   {
-    m1[s[i]]++;
+    m1[s[i]]++; // Inserting each char of string s inside m1 map and marking frequencies of each char
   }
 
   // Counting frequencies of string t inside map m2

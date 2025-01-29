@@ -13,6 +13,8 @@ int main()
   m[107] = "Harsh";
   m[109] = "Harshit";
 
+  m.insert({111, "Ajay"});
+
   for (auto ele : m)
   {
     cout << ele.first << " " << ele.second << endl;
