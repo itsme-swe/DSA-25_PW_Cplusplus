@@ -19,9 +19,10 @@ int maxSubArray(vector<int> &nums)
 
   for (auto val : nums)
   {
-    currSum += val;
-    maxSum = max(currSum, maxSum);
+    currSum += val;                // Adding each value inside current sum varaible
+    maxSum = max(currSum, maxSum); // Comparing currSum with maxSum
 
+    // Reseting the currSum value if its negative
     if (currSum < 0)
       currSum = 0;
   }
