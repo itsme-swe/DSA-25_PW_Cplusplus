@@ -17,5 +17,9 @@ int main()
 
   cout << name << endl; // Harshuj
 
+  string s = name + " Mehra"; // used to append string into new string
+
+  cout << s << endl; // Harshuj Mehra
+
   return 0;
 }
