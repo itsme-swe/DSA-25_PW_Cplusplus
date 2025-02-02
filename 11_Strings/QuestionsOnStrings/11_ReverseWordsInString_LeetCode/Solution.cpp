@@ -20,13 +20,15 @@ string reverseWords(string s)
 {
   int n = s.length();
 
-  string ans = "";
+  string ans = ""; // Initialize an empty string to store the result
 
-  reverse(s.begin(), s.end());
+  reverse(s.begin(), s.end()); // Reverse the entire string
 
   for (int i = 0; i < n; i++)
   {
-    string word = "";
+    string word = ""; // Initialize an empty string to store each word
+
+    // Extract each word from the reversed string
     while (i < n && s[i] != ' ')
     {
       word += s[i];
@@ -38,10 +40,10 @@ string reverseWords(string s)
       reverse(word.begin(), word.end());
       if (!ans.empty())
       {
-        ans += " ";
+        ans += " "; // Add a space between words in the result
       }
 
-      ans += word;
+      ans += word; // Append the word to the result
     }
   }
   return ans;
