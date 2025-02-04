@@ -13,7 +13,27 @@ LeetCode(540) - https://leetcode.com/problems/single-element-in-a-sorted-array/d
 
 using namespace std;
 
-int singleNonDuplicate(vector<int> &nums) {}
+int singleNonDuplicate(vector<int> &nums)
+{
+  int n = nums.size();
+
+  int st = 0;
+  int ed = n - 1;
+
+  if (n == 1)
+    return nums[0];
+
+  while (st <= ed)
+  {
+    int mid = st + (ed - st);
+
+    if (mid == 0 && nums[0] != nums[1])
+      return nums[mid];
+    else if (mid == n - 1 && nums[n - 1] != nums[n - 2])
+      return nums[mid];
+      
+  }
+}
 
 int main()
 {
