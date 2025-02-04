@@ -65,3 +65,5 @@ int main()
 
   return 0;
 }
+
+// The index value is: 4
